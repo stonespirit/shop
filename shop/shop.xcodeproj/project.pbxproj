@@ -28,6 +28,7 @@
 		C91B0999173A84D500FE78C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91B0969173A84D400FE78C1 /* Foundation.framework */; };
 		C91B09A1173A84D500FE78C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91B099F173A84D500FE78C1 /* InfoPlist.strings */; };
 		C91B09A4173A84D500FE78C1 /* shopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B09A3173A84D500FE78C1 /* shopTests.m */; };
+		C91B09B0173A89AB00FE78C1 /* DetailGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		C91B09A0173A84D500FE78C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C91B09A2173A84D500FE78C1 /* shopTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shopTests.h; sourceTree = "<group>"; };
 		C91B09A3173A84D500FE78C1 /* shopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopTests.m; sourceTree = "<group>"; };
+		C91B09AE173A89AB00FE78C1 /* DetailGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailGoodViewController.h; sourceTree = "<group>"; };
+		C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailGoodViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				C91B0989173A84D500FE78C1 /* BasketViewController.h */,
 				C91B098A173A84D500FE78C1 /* BasketViewController.m */,
 				C91B096E173A84D500FE78C1 /* Supporting Files */,
+				C91B09AE173A89AB00FE78C1 /* DetailGoodViewController.h */,
+				C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */,
 			);
 			path = shop;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				C91B0978173A84D500FE78C1 /* AppDelegate.m in Sources */,
 				C91B0984173A84D500FE78C1 /* GoodViewController.m in Sources */,
 				C91B098B173A84D500FE78C1 /* BasketViewController.m in Sources */,
+				C91B09B0173A89AB00FE78C1 /* DetailGoodViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

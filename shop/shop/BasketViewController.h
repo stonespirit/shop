@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BasketViewController : UIViewController
+@interface BasketViewController : UITableViewController
 
 @end

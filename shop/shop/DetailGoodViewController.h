@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  DetailGoodViewController.h
 //  shop
 //
 //  Created by Деяров Руслан on 5/8/13.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DetailGoodViewController.h"
 
-@interface GoodViewController : UITableViewController
+@interface DetailGoodViewController : UITableViewController
 
 @end
