@@ -12,14 +12,14 @@
 
 -(id) initWithDefaultSettings {
   
-  if(self = [super initWithHostName:@"localhost:3000" customHeaderFields:@{@"x-client-identifier" : @"iOS"}]) {
-    
+  if(self = [super initWithHostName:@"localhost" customHeaderFields:@{@"x-client-identifier" : @"iOS"}]) {
+    self.portNumber = 3000;    
   }
   
   return self;
 }
 
--(MKNetworkOperation*) load {
+-(MKNetworkOperation*) loadWithCompletionHandler:(IDBlock) completionBlock {
   
   MKNetworkOperation *op = [self operationWithPath:@"goods"
                                             params:nil
@@ -37,7 +37,8 @@
        DLog(@"Data from cache %@", [completedOperation responseString]);
      }
      else {
-       DLog(@"Data from server %@", [completedOperation responseString]);
+       //DLog(@"Data from server %@", [completedOperation responseJSON]);
+       completionBlock([completedOperation responseJSON]);
      }
      
      //completionBlock([valueString doubleValue]);

@@ -25,11 +25,16 @@ static NSString *cellIdentifier = @"cell";
 		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
 		view.delegate = self;
 		[self.tableView addSubview:view];
-		_refreshHeaderView = view;   
+		_refreshHeaderView = view;
 	}
   
 	//  update the last update date
 	[_refreshHeaderView refreshLastUpdatedDate];
+  
+  
+  _goods = [NSArray new];
+  
+  [self loadGoods];
 }
 
 #pragma mark -
@@ -42,7 +47,7 @@ static NSString *cellIdentifier = @"cell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return 10;
+  return [_goods count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,7 +71,6 @@ static NSString *cellIdentifier = @"cell";
 	//  should be calling your tableviews data source model to reload
 	//  put here just for demo
 	_reloading = YES;
-  
 }
 
 - (void)doneLoadingTableViewData{
@@ -74,11 +78,55 @@ static NSString *cellIdentifier = @"cell";
 	//  model should call this when its done loading
 	_reloading = NO;
 	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
-  
+  [self loadGoods];
 }
 
 - (void)loadGoods{
-  [ApplicationDelegate.goodsEngine load];
+  [ApplicationDelegate.goodsEngine loadWithCompletionHandler:^(NSArray *new_goods) {
+    
+    _old_goods_count = [_goods count];
+    _goods = new_goods;
+    [self reloadRowsWithOld:_old_goods_count andNewGoods: [_goods count]];
+  } ];
+}
+
+- (void) reloadRowsWithOld:(NSInteger) old_goods_count andNewGoods:(NSInteger) new_goods_count
+{
+  
+  NSMutableArray *old_rows = [NSMutableArray new];
+  
+  for (NSInteger i = 0; i < old_goods_count; ++i)
+  {
+    [old_rows addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+  }
+  
+  NSMutableArray *new_rows = [NSMutableArray new];
+  
+  for (NSInteger i = 0; i < new_goods_count; ++i)
+  {
+    [new_rows addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+  }
+  
+  [self.tableView beginUpdates];
+  [self.tableView deleteRowsAtIndexPaths:old_rows withRowAnimation:UITableViewRowAnimationNone];
+  [self.tableView insertRowsAtIndexPaths:new_rows withRowAnimation:UITableViewRowAnimationNone];
+  [self.tableView endUpdates];
+  
+}
+
+- (void) appendNewRows
+{
+  
+  NSMutableArray *rows = [NSMutableArray new];
+  
+  for (NSInteger i = 0; i < [_goods count]; ++i)
+  {
+    [rows addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+  }
+  
+  [self.tableView beginUpdates];
+  [self.tableView insertRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
+  [self.tableView endUpdates];
 }
 
 #pragma mark -
