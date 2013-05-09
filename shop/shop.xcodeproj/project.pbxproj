@@ -76,6 +76,7 @@
 		C91B09A3173A84D500FE78C1 /* shopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopTests.m; sourceTree = "<group>"; };
 		C91B09AE173A89AB00FE78C1 /* DetailGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailGoodViewController.h; sourceTree = "<group>"; };
 		C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailGoodViewController.m; sourceTree = "<group>"; };
+		C9805226173C102800CB27E4 /* constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
 		C993AC78173BD3F8006B9A3E /* GoodsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsEngine.h; sourceTree = "<group>"; };
 		C993AC79173BD3F8006B9A3E /* GoodsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +147,7 @@
 				C91B0977173A84D500FE78C1 /* AppDelegate.m */,
 				C91B097F173A84D500FE78C1 /* MainStoryboard.storyboard */,
 				C91B096E173A84D500FE78C1 /* Supporting Files */,
+				C9805226173C102800CB27E4 /* constant.h */,
 			);
 			path = shop;
 			sourceTree = "<group>";

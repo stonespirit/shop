@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailGoodViewController : UIViewController
+@interface DetailGoodViewController : UIViewController {
+  NSDictionary *good;
+}
 
+@property (nonatomic, strong) NSDictionary *good;
 @end

@@ -61,7 +61,17 @@ static NSString *cellIdentifier = @"cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  [self performSegueWithIdentifier:@"detail" sender:self];
+  [self performSegueWithIdentifier:@"detail" sender: [_goods objectAtIndex:indexPath.row]];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"detail"]) {
+    
+    // Get destination view
+    DetailGoodViewController *vc = [segue destinationViewController];
+    [vc setGood:sender];
+  }
 }
 
 #pragma mark -

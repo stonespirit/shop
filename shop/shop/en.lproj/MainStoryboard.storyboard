@@ -53,9 +53,37 @@
                     <view key="view" contentMode="scaleToFill" id="AYY-YD-qgx">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnj-t9-Xey">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="UZA-NN-xq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yw-fO-szf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="VZH-dN-HOS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cnj-t9-Xey" firstAttribute="top" secondItem="AYY-YD-qgx" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2qP-s1-Gag"/>
+                            <constraint firstAttribute="trailing" secondItem="5yw-fO-szf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EmM-cX-MSv"/>
+                            <constraint firstAttribute="trailing" secondItem="Cnj-t9-Xey" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U2V-pH-HNJ"/>
+                            <constraint firstItem="Cnj-t9-Xey" firstAttribute="leading" secondItem="AYY-YD-qgx" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a1J-wZ-eJY"/>
+                            <constraint firstItem="5yw-fO-szf" firstAttribute="top" secondItem="AYY-YD-qgx" secondAttribute="top" constant="61" id="gep-Tk-CUV"/>
+                            <constraint firstItem="5yw-fO-szf" firstAttribute="leading" secondItem="AYY-YD-qgx" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lIM-ri-gXQ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IMf-7P-drn"/>
+                    <navigationItem key="navigationItem" id="IMf-7P-drn">
+                        <barButtonItem key="rightBarButtonItem" title="Buy" id="HfQ-pJ-Knw"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spN-53-53Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,6 +122,9 @@
         </class>
         <class className="GoodViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GoodViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
