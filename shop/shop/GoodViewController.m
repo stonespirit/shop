@@ -84,7 +84,7 @@ static NSString *cellIdentifier = @"cell";
 }
 
 - (void)loadGoods{
-  [ApplicationDelegate.goodsEngine loadWithCompletionHandler:^(NSArray *new_goods) {
+  [ApplicationDelegate.goodsEngine loadGoods:^(NSArray *new_goods) {
     
     _goods = new_goods;
     [self reloadRows:[_goods count]];

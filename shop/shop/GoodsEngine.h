@@ -12,5 +12,6 @@ typedef void (^IDBlock)(NSArray *object);
 @interface GoodsEngine : MKNetworkEngine
 -(id) initWithDefaultSettings;
 
--(MKNetworkOperation*) loadWithCompletionHandler:(IDBlock) completionBlock;
+-(MKNetworkOperation*) loadGoods:(IDBlock) completionBlock;
+-(MKNetworkOperation*) loadGood:(NSString*) good_id completion:(IDBlock) completionBlock;
 @end

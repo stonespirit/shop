@@ -19,9 +19,20 @@
   return self;
 }
 
--(MKNetworkOperation*) loadWithCompletionHandler:(IDBlock) completionBlock {
+-(MKNetworkOperation*) loadGoods:(IDBlock) completionBlock
+{
+  return [self load:@"goods" completion:completionBlock];
+}
+
+-(MKNetworkOperation*) loadGood:(NSString *)good_id completion:(IDBlock)completionBlock
+{
+  return [self load:[NSString stringWithFormat:@"good/%@", good_id] completion:completionBlock];
+}
+
+-(MKNetworkOperation*) load:(NSString *)url completion:(IDBlock)completionBlock
+{
   
-  MKNetworkOperation *op = [self operationWithPath:@"goods"
+  MKNetworkOperation *op = [self operationWithPath:url
                                             params:nil
                                         httpMethod:@"GET"];
   
@@ -30,8 +41,7 @@
      // the completionBlock will be called twice.
      // if you are interested only in new values, move that code within the else block
      
-     NSString *valueString = [[completedOperation responseString] componentsSeparatedByString:@","][1];
-     DLog(@"%@", valueString);
+     //NSString *valueString = [[completedOperation responseString] componentsSeparatedByString:@","][1];
      
      if([completedOperation isCachedResponse]) {
        DLog(@"Data from cache %@", [completedOperation responseString]);
