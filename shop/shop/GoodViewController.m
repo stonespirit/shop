@@ -7,6 +7,7 @@
 //
 
 #import "GoodViewController.h"
+#import "AppDelegate.h"
 
 @interface GoodViewController ()
 
@@ -74,6 +75,10 @@ static NSString *cellIdentifier = @"cell";
 	_reloading = NO;
 	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
   
+}
+
+- (void)loadGoods{
+  [ApplicationDelegate.goodsEngine load];
 }
 
 #pragma mark -

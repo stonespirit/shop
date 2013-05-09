@@ -6,30 +6,6 @@
 // project.
 
 
-// ASIHTTPRequest
-#define COCOAPODS_POD_AVAILABLE_ASIHTTPRequest
-#define COCOAPODS_VERSION_MAJOR_ASIHTTPRequest 1
-#define COCOAPODS_VERSION_MINOR_ASIHTTPRequest 8
-#define COCOAPODS_VERSION_PATCH_ASIHTTPRequest 1
-
-// ASIHTTPRequest/ASIWebPageRequest
-#define COCOAPODS_POD_AVAILABLE_ASIHTTPRequest_ASIWebPageRequest
-#define COCOAPODS_VERSION_MAJOR_ASIHTTPRequest_ASIWebPageRequest 1
-#define COCOAPODS_VERSION_MINOR_ASIHTTPRequest_ASIWebPageRequest 8
-#define COCOAPODS_VERSION_PATCH_ASIHTTPRequest_ASIWebPageRequest 1
-
-// ASIHTTPRequest/CloudFiles
-#define COCOAPODS_POD_AVAILABLE_ASIHTTPRequest_CloudFiles
-#define COCOAPODS_VERSION_MAJOR_ASIHTTPRequest_CloudFiles 1
-#define COCOAPODS_VERSION_MINOR_ASIHTTPRequest_CloudFiles 8
-#define COCOAPODS_VERSION_PATCH_ASIHTTPRequest_CloudFiles 1
-
-// ASIHTTPRequest/S3
-#define COCOAPODS_POD_AVAILABLE_ASIHTTPRequest_S3
-#define COCOAPODS_VERSION_MAJOR_ASIHTTPRequest_S3 1
-#define COCOAPODS_VERSION_MINOR_ASIHTTPRequest_S3 8
-#define COCOAPODS_VERSION_PATCH_ASIHTTPRequest_S3 1
-
 // EGOTableViewPullRefresh
 #define COCOAPODS_POD_AVAILABLE_EGOTableViewPullRefresh
 #define COCOAPODS_VERSION_MAJOR_EGOTableViewPullRefresh 0
@@ -42,6 +18,12 @@
 // so we were not able to define version macros.
 // Please contact the author.
 // Version: 1.5pre.
+
+// MKNetworkKit
+#define COCOAPODS_POD_AVAILABLE_MKNetworkKit
+#define COCOAPODS_VERSION_MAJOR_MKNetworkKit 0
+#define COCOAPODS_VERSION_MINOR_MKNetworkKit 87
+#define COCOAPODS_VERSION_PATCH_MKNetworkKit 0
 
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
