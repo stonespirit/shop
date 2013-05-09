@@ -8,6 +8,7 @@ class GoodsController < ApplicationController
 
   def show
     @good = Good.find(params[:id])
+    sleep 3
     render json: @good
   end
 end

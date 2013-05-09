@@ -10,6 +10,8 @@
 
 @interface DetailGoodViewController : UIViewController {
   NSDictionary *good;
+  IBOutlet UILabel *_price_label;
+  IBOutlet UILabel *_description_label;
 }
 
 @property (nonatomic, strong) NSDictionary *good;

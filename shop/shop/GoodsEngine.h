@@ -5,7 +5,7 @@
 //  Created by Deyarov Ruslan on 09.05.13.
 //  Copyright (c) 2013 Деяров Руслан. All rights reserved.
 //
-typedef void (^IDBlock)(NSArray *object);
+typedef void (^IDBlock)(id object);
 
 #import "MKNetworkEngine.h"
 

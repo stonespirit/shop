@@ -26,7 +26,7 @@
 
 -(MKNetworkOperation*) loadGood:(NSString *)good_id completion:(IDBlock)completionBlock
 {
-  return [self load:[NSString stringWithFormat:@"good/%@", good_id] completion:completionBlock];
+  return [self load:[NSString stringWithFormat:@"goods/%@", good_id] completion:completionBlock];
 }
 
 -(MKNetworkOperation*) load:(NSString *)url completion:(IDBlock)completionBlock

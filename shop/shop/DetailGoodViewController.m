@@ -7,6 +7,7 @@
 //
 
 #import "DetailGoodViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailGoodViewController ()
 
@@ -19,6 +20,7 @@
 {
   [super viewDidLoad];
   self.title = [_good objectForKey:@"title"];
+  [self loadGood];
 	// Do any additional setup after loading the view.
 }
 
@@ -26,6 +28,13 @@
 {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)loadGood{
+  [ApplicationDelegate.goodsEngine loadGood:[_good objectForKey:@"id"] completion:^(id new_good) {
+    _price_label.text = [NSString stringWithFormat:@"Price: %@", [new_good objectForKey: @"price"]];
+    _description_label.text = [NSString stringWithFormat:@"Description: %@", [new_good objectForKey: @"description"]];
+  } ];
 }
 
 @end
