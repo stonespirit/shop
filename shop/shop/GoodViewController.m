@@ -55,6 +55,7 @@ static NSString *cellIdentifier = @"cell";
   
   UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  cell.textLabel.text = [[_goods objectAtIndex: indexPath.row] objectForKey:@"title"];
   return cell;
 }
 
@@ -113,21 +114,6 @@ static NSString *cellIdentifier = @"cell";
   [self.tableView insertRowsAtIndexPaths:new_rows withRowAnimation:UITableViewRowAnimationNone];
   [self.tableView endUpdates];
   
-}
-
-- (void) appendNewRows
-{
-  
-  NSMutableArray *rows = [NSMutableArray new];
-  
-  for (NSInteger i = 0; i < [_goods count]; ++i)
-  {
-    [rows addObject:[NSIndexPath indexPathForRow:i inSection:0]];
-  }
-  
-  [self.tableView beginUpdates];
-  [self.tableView insertRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
-  [self.tableView endUpdates];
 }
 
 #pragma mark -
