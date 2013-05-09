@@ -17,7 +17,6 @@
   //  Reloading var should really be your tableviews datasource
   //  Putting it here for demo purposes
   BOOL _reloading;
-  NSInteger _old_goods_count;
   NSArray *_goods;
 }
 

@@ -2,6 +2,7 @@
 class GoodsController < ApplicationController
   def index
     @goods = Good.all[0..rand(9)]
+    sleep 3
     render json: @goods, :only => [:id, :title, :price]
   end
 

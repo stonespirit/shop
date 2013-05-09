@@ -71,6 +71,7 @@ static NSString *cellIdentifier = @"cell";
 	//  should be calling your tableviews data source model to reload
 	//  put here just for demo
 	_reloading = YES;
+  [self loadGoods];
 }
 
 - (void)doneLoadingTableViewData{
@@ -78,24 +79,24 @@ static NSString *cellIdentifier = @"cell";
 	//  model should call this when its done loading
 	_reloading = NO;
 	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
-  [self loadGoods];
+
 }
 
 - (void)loadGoods{
   [ApplicationDelegate.goodsEngine loadWithCompletionHandler:^(NSArray *new_goods) {
     
-    _old_goods_count = [_goods count];
     _goods = new_goods;
-    [self reloadRowsWithOld:_old_goods_count andNewGoods: [_goods count]];
+    [self reloadRows:[_goods count]];
+    
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
   } ];
 }
 
-- (void) reloadRowsWithOld:(NSInteger) old_goods_count andNewGoods:(NSInteger) new_goods_count
-{
-  
+- (void) reloadRows:(NSInteger) new_goods_count
+{ 
   NSMutableArray *old_rows = [NSMutableArray new];
   
-  for (NSInteger i = 0; i < old_goods_count; ++i)
+  for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:0]; ++i)
   {
     [old_rows addObject:[NSIndexPath indexPathForRow:i inSection:0]];
   }
@@ -150,9 +151,7 @@ static NSString *cellIdentifier = @"cell";
 
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
   
-	[self reloadTableViewDataSource];
-	[self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:3.0];
-  
+	[self reloadTableViewDataSource];  
 }
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{

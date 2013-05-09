@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.goodsEngine = [[GoodsEngine alloc] initWithDefaultSettings];
-  
+
     // Override point for customization after application launch.
     return YES;
 }
