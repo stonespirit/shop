@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -8,11 +8,14 @@
         <scene sceneID="11">
             <objects>
                 <viewController title="First" id="2" customClass="GoodViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Товары" image="first" id="7"/>
+                    <navigationItem key="navigationItem" id="tqZ-Qj-1P5"/>
+                    <connections>
+                        <segue destination="N7O-GZ-J4x" kind="push" identifier="detail" id="qbg-fh-IMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="1179" y="-138"/>
         </scene>
         <!--Basket View Controller - Second-->
         <scene sceneID="13">
@@ -22,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="1179" y="498"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -35,7 +38,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="V2N-J1-lJU" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
                     </connections>
                 </tabBarController>
@@ -46,28 +49,36 @@
         <!--Detail Good View Controller-->
         <scene sceneID="Tei-bD-fmy">
             <objects>
-                <viewController id="N7O-GZ-J4x" customClass="DetailGoodViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="" storyboardIdentifier="" id="N7O-GZ-J4x" customClass="DetailGoodViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYY-YD-qgx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gv-IH-dZm">
-                                <items>
-                                    <navigationItem title="Title" id="Wzq-AW-AYz"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6gv-IH-dZm" firstAttribute="top" secondItem="AYY-YD-qgx" secondAttribute="top" type="default" id="Glu-Iw-ug5"/>
-                            <constraint firstItem="6gv-IH-dZm" firstAttribute="trailing" secondItem="AYY-YD-qgx" secondAttribute="trailing" type="default" id="lEG-BS-O8z"/>
-                            <constraint firstItem="6gv-IH-dZm" firstAttribute="leading" secondItem="AYY-YD-qgx" secondAttribute="leading" type="default" id="m7k-Yn-Lh9"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IMf-7P-drn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spN-53-53Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="-138"/>
+            <point key="canvasLocation" x="1610" y="-138"/>
+        </scene>
+        <!--Navigation Controller - Товары-->
+        <scene sceneID="8uu-jh-e5R">
+            <objects>
+                <navigationController id="V2N-J1-lJU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Товары" image="first" id="7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kBV-5Y-ZwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="XTH-WM-NXi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19s-jA-K1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-138"/>
         </scene>
     </scenes>
     <resources>
@@ -78,14 +89,11 @@
         <class className="BasketViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasketViewController.h"/>
         </class>
-        <class className="DetailGoodViewController" superclassName="UITableViewController">
+        <class className="DetailGoodViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailGoodViewController.h"/>
         </class>
         <class className="GoodViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GoodViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

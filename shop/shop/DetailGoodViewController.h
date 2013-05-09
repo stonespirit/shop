@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailGoodViewController : UITableViewController
+@interface DetailGoodViewController : UIViewController
 
 @end

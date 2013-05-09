@@ -35,14 +35,6 @@ static NSString *cellIdentifier = @"cell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  //set UITableView
-//  [VariableStore sharedInstance].logsTableView = tableView;
-//  
-//  if ([VariableStore sharedInstance].logs == nil) {
-//    return 0;
-//  } else {
-//    return [[VariableStore sharedInstance].logs count];
-//  }
   return 10;
 }
 
@@ -62,15 +54,7 @@ static NSString *cellIdentifier = @"cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-  NSLog(@"select");
-  
-  DetailGoodViewController* controller = [DetailGoodViewController new];
-  //[[self presentViewController:viewController animated:YES];
-  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-  
-   [self presentViewController:controller animated:YES completion:nil];
-  
+  [self performSegueWithIdentifier:@"detail" sender:self];
 }
 
 @end
