@@ -1,0 +1,2 @@
+platform :ios
+pod 'EGOTableViewPullRefresh',  '~> 0.1.0'
