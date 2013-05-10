@@ -15,14 +15,6 @@
 @dynamic price;
 @dynamic title;
 
-+ (int) countAllObjects
-{
-  NSManagedObjectContext *moc = [[VPPCoreData sharedInstance] createManagedObjectContext];
-  int count = [[VPPCoreData sharedInstance] countObjectsForEntity:@"Goods" filteredBy:nil managedObjectContext:moc];
-  
-  return count;
-}
-
 + (void) saveGood:(NSDictionary *)good
 {
   NSManagedObjectContext *moc = [[VPPCoreData sharedInstance] createManagedObjectContext];
