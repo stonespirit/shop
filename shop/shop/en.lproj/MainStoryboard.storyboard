@@ -21,7 +21,7 @@
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" customClass="BasketViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Корзина" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Basket" image="second" id="6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +82,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IMf-7P-drn">
-                        <barButtonItem key="rightBarButtonItem" title="Buy" id="HfQ-pJ-Knw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Put in basket" id="HfQ-pJ-Knw">
+                            <connections>
+                                <action selector="putGoodInBasket" destination="N7O-GZ-J4x" id="d18-W9-Yjc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="_description_label" destination="5yw-fO-szf" id="wJV-nQ-8V9"/>
@@ -93,11 +97,11 @@
             </objects>
             <point key="canvasLocation" x="1610" y="-138"/>
         </scene>
-        <!--Navigation Controller - Товары-->
+        <!--Navigation Controller - Goods-->
         <scene sceneID="8uu-jh-e5R">
             <objects>
                 <navigationController id="V2N-J1-lJU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Товары" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Goods" image="first" id="7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kBV-5Y-ZwZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

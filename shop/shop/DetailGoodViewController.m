@@ -8,6 +8,7 @@
 
 #import "DetailGoodViewController.h"
 #import "AppDelegate.h"
+#import "Goods.h"
 
 @interface DetailGoodViewController ()
 
@@ -34,7 +35,27 @@
   [ApplicationDelegate.goodsEngine loadGood:[_good objectForKey:@"id"] completion:^(id new_good) {
     _price_label.text = [NSString stringWithFormat:@"Price: %@", [new_good objectForKey: @"price"]];
     _description_label.text = [NSString stringWithFormat:@"Description: %@", [new_good objectForKey: @"description"]];
+    
+    full_good = new_good;
   } ];
+  
+}
+
+-(IBAction)putGoodInBasket
+{
+  if (full_good) {
+    //DLog(@"good=%@", full_good);
+      DLog(@"goods=%@", [Goods all]);
+    
+    [Goods saveGood:full_good];
+    
+      DLog(@"goods=%@", [Goods all]);
+  } else {
+    DLog(@"not_loaded yet");
+  }
+  
+
+
 }
 
 @end

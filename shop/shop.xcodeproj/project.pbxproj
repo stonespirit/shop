@@ -30,6 +30,8 @@
 		C91B09A1173A84D500FE78C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91B099F173A84D500FE78C1 /* InfoPlist.strings */; };
 		C91B09A4173A84D500FE78C1 /* shopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B09A3173A84D500FE78C1 /* shopTests.m */; };
 		C91B09B0173A89AB00FE78C1 /* DetailGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */; };
+		C9801DDA173CD7A000D36227 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9801DD8173CD7A000D36227 /* Model.xcdatamodeld */; };
+		C9801DE9173CD9AA00D36227 /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = C9801DE8173CD9AA00D36227 /* Goods.m */; };
 		C993AC7A173BD3F8006B9A3E /* GoodsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C993AC79173BD3F8006B9A3E /* GoodsEngine.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,9 @@
 		C91B09A3173A84D500FE78C1 /* shopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopTests.m; sourceTree = "<group>"; };
 		C91B09AE173A89AB00FE78C1 /* DetailGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailGoodViewController.h; sourceTree = "<group>"; };
 		C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailGoodViewController.m; sourceTree = "<group>"; };
+		C9801DD9173CD7A000D36227 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C9801DE7173CD9AA00D36227 /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
+		C9801DE8173CD9AA00D36227 /* Goods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goods.m; sourceTree = "<group>"; };
 		C9805226173C102800CB27E4 /* constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
 		C993AC78173BD3F8006B9A3E /* GoodsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsEngine.h; sourceTree = "<group>"; };
 		C993AC79173BD3F8006B9A3E /* GoodsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsEngine.m; sourceTree = "<group>"; };
@@ -141,8 +146,9 @@
 		C91B096D173A84D400FE78C1 /* shop */ = {
 			isa = PBXGroup;
 			children = (
+				C9801DD1173CD0A300D36227 /* views */,
+				C9801DCE173CD07900D36227 /* models */,
 				C993AC7C173BD41B006B9A3E /* network */,
-				C993AC7B173BD409006B9A3E /* view */,
 				C91B0976173A84D500FE78C1 /* AppDelegate.h */,
 				C91B0977173A84D500FE78C1 /* AppDelegate.m */,
 				C91B097F173A84D500FE78C1 /* MainStoryboard.storyboard */,
@@ -189,7 +195,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C993AC7B173BD409006B9A3E /* view */ = {
+		C9801DCE173CD07900D36227 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C9801DD8173CD7A000D36227 /* Model.xcdatamodeld */,
+				C9801DE7173CD9AA00D36227 /* Goods.h */,
+				C9801DE8173CD9AA00D36227 /* Goods.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		C9801DD1173CD0A300D36227 /* views */ = {
 			isa = PBXGroup;
 			children = (
 				C91B0982173A84D500FE78C1 /* GoodViewController.h */,
@@ -199,7 +215,7 @@
 				C91B09AE173A89AB00FE78C1 /* DetailGoodViewController.h */,
 				C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */,
 			);
-			name = view;
+			name = views;
 			sourceTree = "<group>";
 		};
 		C993AC7C173BD41B006B9A3E /* network */ = {
@@ -361,6 +377,8 @@
 				C91B098B173A84D500FE78C1 /* BasketViewController.m in Sources */,
 				C91B09B0173A89AB00FE78C1 /* DetailGoodViewController.m in Sources */,
 				C993AC7A173BD3F8006B9A3E /* GoodsEngine.m in Sources */,
+				C9801DDA173CD7A000D36227 /* Model.xcdatamodeld in Sources */,
+				C9801DE9173CD9AA00D36227 /* Goods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +573,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9801DD8173CD7A000D36227 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9801DD9173CD7A000D36227 /* Model.xcdatamodel */,
+			);
+			currentVersion = C9801DD9173CD7A000D36227 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C91B095C173A84D400FE78C1 /* Project object */;
 }
