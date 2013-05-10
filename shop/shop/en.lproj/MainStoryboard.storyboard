@@ -15,17 +15,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1179" y="-138"/>
+            <point key="canvasLocation" x="1705" y="-138"/>
         </scene>
         <!--Basket View Controller - Second-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" customClass="BasketViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Basket" image="second" id="6"/>
+                    <navigationItem key="navigationItem" id="Ul0-uf-LQX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="AHn-9U-Uah">
+                            <connections>
+                                <action selector="dropAllGoods" destination="3" id="WJu-aM-VKF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1179" y="498"/>
+            <point key="canvasLocation" x="1705" y="498"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -39,7 +45,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="V2N-J1-lJU" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="mrO-NH-9Uf" kind="relationship" relationship="viewControllers" id="27"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -95,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spN-53-53Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="-138"/>
+            <point key="canvasLocation" x="2136" y="-138"/>
         </scene>
         <!--Navigation Controller - Goods-->
         <scene sceneID="8uu-jh-e5R">
@@ -115,6 +121,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19s-jA-K1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
+        </scene>
+        <!--Navigation Controller - Basket-->
+        <scene sceneID="PD2-Zb-0g4">
+            <objects>
+                <navigationController id="mrO-NH-9Uf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Basket" image="second" id="6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Go4-DV-ckX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="G4c-sO-wGA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwu-rY-H0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="498"/>
         </scene>
     </scenes>
     <resources>

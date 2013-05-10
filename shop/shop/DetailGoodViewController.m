@@ -44,17 +44,10 @@
 -(IBAction)putGoodInBasket
 {
   if (full_good) {
-    //DLog(@"good=%@", full_good);
-      DLog(@"goods=%@", [Goods all]);
-    
     [Goods saveGood:full_good];
-    
-      DLog(@"goods=%@", [Goods all]);
   } else {
     DLog(@"not_loaded yet");
   }
-  
-
 
 }
 
