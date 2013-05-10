@@ -12,8 +12,8 @@
 
 -(id) initWithDefaultSettings {
   
-  if(self = [super initWithHostName:@"localhost" customHeaderFields:@{@"x-client-identifier" : @"iOS"}]) {
-    self.portNumber = 3000;    
+  if(self = [super initWithHostName:@"youct.ru" customHeaderFields:@{@"x-client-identifier" : @"iOS"}]) {
+    self.portNumber = 3001;
   }
   
   return self;
