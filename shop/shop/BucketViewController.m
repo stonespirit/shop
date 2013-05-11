@@ -72,7 +72,7 @@ static NSString *cellIdentifier = @"cell";
   
 }
 
--(IBAction)dropAllGoods
+- (IBAction)dropAllGoods
 {
   [Goods removeAll];
   [self reload];

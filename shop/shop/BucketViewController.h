@@ -10,6 +10,7 @@
 
 @interface BucketViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
 
-+ (void)reload;
+- (void) reload;
+- (IBAction)dropAllGoods;
 
 @end
