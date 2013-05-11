@@ -25,7 +25,10 @@
   g.desc  = [good objectForKey:@"description"];
   g.price = [good objectForKey:@"price"];
   
-  [[VPPCoreData sharedInstance] saveManagedObjectContext:moc error:NULL]; 
+  [[VPPCoreData sharedInstance] saveManagedObjectContext:moc error:NULL];
+  
+  //generate event
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"addGood" object:nil];
 }
 
 @end

@@ -21,6 +21,11 @@ static NSString *cellIdentifier = @"cell";
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(reload)
+                                               name:@"addGood"
+                                             object:nil];
 }
 
 #pragma mark -
@@ -67,10 +72,6 @@ static NSString *cellIdentifier = @"cell";
   
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [self reload];
-}
-
 -(IBAction)dropAllGoods
 {
   [Goods removeAll];
@@ -82,6 +83,10 @@ static NSString *cellIdentifier = @"cell";
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
