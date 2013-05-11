@@ -21,7 +21,7 @@
 		C91B0984173A84D500FE78C1 /* GoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B0983173A84D500FE78C1 /* GoodViewController.m */; };
 		C91B0986173A84D500FE78C1 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C91B0985173A84D500FE78C1 /* first.png */; };
 		C91B0988173A84D500FE78C1 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91B0987173A84D500FE78C1 /* first@2x.png */; };
-		C91B098B173A84D500FE78C1 /* BasketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B098A173A84D500FE78C1 /* BasketViewController.m */; };
+		C91B098B173A84D500FE78C1 /* BucketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91B098A173A84D500FE78C1 /* BucketViewController.m */; };
 		C91B098D173A84D500FE78C1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C91B098C173A84D500FE78C1 /* second.png */; };
 		C91B098F173A84D500FE78C1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C91B098E173A84D500FE78C1 /* second@2x.png */; };
 		C91B0997173A84D500FE78C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91B0996173A84D500FE78C1 /* SenTestingKit.framework */; };
@@ -66,8 +66,8 @@
 		C91B0983173A84D500FE78C1 /* GoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodViewController.m; sourceTree = "<group>"; };
 		C91B0985173A84D500FE78C1 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		C91B0987173A84D500FE78C1 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		C91B0989173A84D500FE78C1 /* BasketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasketViewController.h; sourceTree = "<group>"; };
-		C91B098A173A84D500FE78C1 /* BasketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketViewController.m; sourceTree = "<group>"; };
+		C91B0989173A84D500FE78C1 /* BucketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BucketViewController.h; sourceTree = "<group>"; };
+		C91B098A173A84D500FE78C1 /* BucketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BucketViewController.m; sourceTree = "<group>"; };
 		C91B098C173A84D500FE78C1 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		C91B098E173A84D500FE78C1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		C91B0995173A84D500FE78C1 /* shopTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shopTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,8 +210,8 @@
 			children = (
 				C91B0982173A84D500FE78C1 /* GoodViewController.h */,
 				C91B0983173A84D500FE78C1 /* GoodViewController.m */,
-				C91B0989173A84D500FE78C1 /* BasketViewController.h */,
-				C91B098A173A84D500FE78C1 /* BasketViewController.m */,
+				C91B0989173A84D500FE78C1 /* BucketViewController.h */,
+				C91B098A173A84D500FE78C1 /* BucketViewController.m */,
 				C91B09AE173A89AB00FE78C1 /* DetailGoodViewController.h */,
 				C91B09AF173A89AB00FE78C1 /* DetailGoodViewController.m */,
 			);
@@ -374,7 +374,7 @@
 				C91B0974173A84D500FE78C1 /* main.m in Sources */,
 				C91B0978173A84D500FE78C1 /* AppDelegate.m in Sources */,
 				C91B0984173A84D500FE78C1 /* GoodViewController.m in Sources */,
-				C91B098B173A84D500FE78C1 /* BasketViewController.m in Sources */,
+				C91B098B173A84D500FE78C1 /* BucketViewController.m in Sources */,
 				C91B09B0173A89AB00FE78C1 /* DetailGoodViewController.m in Sources */,
 				C993AC7A173BD3F8006B9A3E /* GoodsEngine.m in Sources */,
 				C9801DDA173CD7A000D36227 /* Model.xcdatamodeld in Sources */,

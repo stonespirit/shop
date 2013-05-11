@@ -16,7 +16,6 @@
 @property (nonatomic, retain) NSString * price;
 @property (nonatomic, retain) NSString * title;
 
-+ (int) countAllObjects;
 + (void) saveGood:(NSDictionary *)good;
 
 @end

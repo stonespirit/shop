@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BasketViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+@interface BucketViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
 
 + (void)reload;
 

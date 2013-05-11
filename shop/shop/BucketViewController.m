@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Деяров Руслан. All rights reserved.
 //
 
-#import "BasketViewController.h"
+#import "BucketViewController.h"
 #import "Goods.h"
 
-@interface BasketViewController ()
+@interface BucketViewController ()
 
 @end
 
-@implementation BasketViewController
+@implementation BucketViewController
 
 static NSString *cellIdentifier = @"cell";
 
